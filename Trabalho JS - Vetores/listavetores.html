@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Lista Vetor</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="listvet.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            .interface{
+                background-color: rgba(69, 192, 106, 0.527);
+                background-image:url(trianglify1.png);
+                background-repeat: no-repeat;
+                color: rgb(0, 0, 0);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                overflow:hidden;
+            }
+            .row{
+                text-align: center;
+                padding-bottom: 440px;
+            }
+            .col-sm-4-1{
+                color: rgb(0, 0, 0);
+                background-color:rgb(248, 248, 248);
+                text-align: justify;
+                border-top: solid 2px;
+                border-right: solid 1px;
+                border-right: 10px;
+                border-bottom: solid 2px;
+                box-sizing: border-box;
+                padding-left: 420px;
+                padding-bottom: 42px;
+                margin: 10px -3px 10px 10px;
+            }
+            .botaoc{
+                background-color: rgb(255, 255, 255);
+                border: solid 1px;
+                border-radius: 5px 5px 5px 5px;
+                border-color: #444444;
+                color: rgb(0, 0, 0);
+                float: left;
+                display: grid;
+                margin: 2px;
+                padding: 3px;
+            }
+            .botaod{
+                background-color:  rgb(255, 255, 255);
+                border-color: #444444;
+                border: solid 1px;
+                border-radius: 5px 5px 5px 5px;
+                color: rgb(0, 0, 0);
+                float: left;
+                display: grid;
+            }
+            .botaod:hover{
+                background-color: #cacaca;
+                transition: background 1s;
+            }  
+            .botaoc:hover{
+                background-color: #cacaca;
+                transition: background 1s;
+            }
+            .r{
+              padding-left: 150px;
+              color: rgb(0, 0, 0);
+              font-family: 'Roboto', sans-serif;
+            }
+        </style>        
+        <div class="interface">
+            <div class="row">
+                <h2> Lista de vetor - 15 Exercícios <br/> <h4>Profº Daniel</h4></h1>
+
+                <p>
+                    <h4> Aluno: Daniel Henrique Silva - 21146 </h4>
+                </p> 
+                <p>
+                    <h4> Aluno: Mateus Borges Rodrigues - 21026</h4>
+                </p>      
+                          
+                <div class="col-sm-4-1">
+                    <br>
+                    <p>
+                        <b>1.</b> Faça um programa que preencha um vetor com seis elementos inteiros. Calcule </br>  e mostre todos os números pares, a quantidade, todos os números ímpares e a quantidade.
+
+                    </p>
+                    <p>
+                        <button onclick="exerc01()" class="botaoc"> <b>Iniciar</b> </button>
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <b>2.</b> Faça um programa que preencha um vetor com sete números inteiros, calcule e mostre os</br> múltiplos de 2, de 3 e de 2 e 3.
+                    </p>
+                    <p>
+                        <button onclick="exerc02()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <b>3.</b> Faça um programa para controlar o estoque de uma empresa. Inicialmente o programa</br> deverá preencher dois vetores com dez posições cada, o primeiro corresponde ao código</br> do produto e o segundo o total desse produto em estoque. Após isso o programa deverá <br> ler um conjunto indeterminado de dados contendo o código de um cliente e o código do<br> produto que ele deseja comprar, juntamente com a quantidade.<br><br> <b>Código do cliente igual à 0 indica fim de programa.</b>
+                     </p>
+                    <p>
+                        <button onclick="exerc03()" class="botaoc"> <b>Iniciar</b> </button>
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <p>
+                        <b>4.</b> Faça um programa que preencha um vetor com quinze elementos inteiros e verifique<br> a existência de elementos iguais a 30, mostrando as posições em que apareceram.
+                    </p>
+                    <p>
+                        <button onclick="exerc04()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <p>
+                        <b>5.</b> Uma escola deseja saber se existem alunos cursando, simultaneamente duas disciplinas,<br> Lógica e Linguagem de programação. Coloque os números das matrículas dos alunos que<br> cursam Lógia em um vetor, quinze alunos. Coloque os de Linguagem em outro vetor, dez <br>alunos. Mostre as matrículas que aparecem nos dois vetores.
+                    </p>
+                    <p>
+                        <button onclick="exerc05()" class="botaoc"> <b>Iniciar</b> </button>
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <b>6.</b> Faça um programa que receba o total de vendas de cada vendedor de uma loja e armazene-as<br> em um vetor. Receba também o percentual de comissão a que cada vendedor tem direito e<br> armazeneo-os em outros vetor. Receba os nomes desses vendedores e armazene-os em um terceiro<br> vetor. Existem 10 vendedores na loja. Mostre o total de vendas, maior e menor valor e o <br>nome de quem receberá e um relatório com vendedores e quanto vão receber de comissão.
+                    </p>
+                    <p>
+                        Informe total de vendas <input type="number" id="venda"/>
+                    </p>
+                    <p>
+                        Informe comissão das vendas <input type="number" id="comissao"/>
+                    </p>
+                    <p>
+                        Informe nome do vendedor <input type="text" id="nome"/>
+                    </p>
+                    <br>
+                    <p>
+                        <button onclick="cadastra()" class="botaod"> Inserir no vetor</button>
+                    </p>
+                    <br>
+                    <p>
+                        <p>
+                            <button onclick="relatorio()" class="botaod"> Criar relatório</button>
+                        </p>
+                        <br>
+                        <br>
+                        <p>
+                            <button onclick="totalVenda()" class="botaod"> Total vendas</button>
+                        </p>
+                        <br>
+                        <p>
+                            <button onclick="maiorVenda()" class="botaod"> Maior valor</button>
+                        </p>
+                        <br>
+                        <p> 
+                            <button onclick="menorVenda()" class="botaod"> Menor valor</button>
+                        </p>
+                    </p>
+                    <br>
+                    <p id="r6" class="r">
+                    </p>
+                    <br>
+                    <p>
+                        <b>7.</b> Faça um programa que preencha um vetor com dez números reais, calcule e mostre a quantidade<br> de números negativos e a soma dos números positivos deste vetor.
+                    </p>
+                    <p>
+                        <button onclick="exerc07()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <b>8.</b> Faça um programa que preencha um vetor com os nomes de sete alunos e carregue outro<br> vetor com a média final desses alunos. Calcule e mostre o aluno com maior média e quanto o aluno <br>precisa tirar na prova de exame final para ser aprovado, caso sua média for menor que 7.
+                    </p>
+                    <br>
+                    <p>
+                        Informe o nome do aluno <input type="text" id="nomeAluno"/>
+                    </p>
+                    <p> 
+                        Informe a média final deste aluno <input type="text" id="mediaFinal"/>
+                    </p>
+
+                    <p>
+                        <button onclick="incluir08()" class="botaod"> Inserir no vetor</button>
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <button onclick="relatorio08()" class="botaod"> Criar relatório</button>
+                    </p>
+                    <br>
+                    <br>
+                    <p id="r8" class="r">
+                    </p>
+                    <br>
+                    <p>
+                        <b>12.</b> Faça um programa que receba cinco números e mostre a saída conforme exemplo.
+                    </p>
+                    <p>
+                        <button onclick="exerc12()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <b>13.</b> Faça um programa que receba o nome e a nota de oito alunos e mostre um relatório conforme exemplo.
+                    </p>
+                    <p>
+                        <button onclick="exerc13()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <b>14.</b> Faça um programa que receba o nome e duas notas de seis alunos e mostre um relatório conforme exemplo.
+                    </p>
+                    <p> 
+                        <button onclick="exerc14()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p id="r14" class="r">
+                    </p>
+                    <br>
+                    <p>
+                        <b>15.</b> Faça um programa que receba o nome de oito clientes e armazene-os em um vetor. Em um <br>segundo vetor, armazene a quantidade de Dvds, por cada um dos clientes. Sabe-se que a cada dez,<br> uma será grátis. Mostre o nome de todos os clientes com a quantidade de locações grátis a que ele<br> tem direito.
+                    </p>
+                    <p>
+                        <button onclick="exerc15()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p id="saida" class="r">
+                    </p>
+                    <br>
+                    <p>
+                        <b>16.</b> Faça um programa que receba o nome de cinco produtos e seus preços. Mostre a quantidade de<br> produtos com preço inferior a R$50, o nome dos produtos com preço entre R$50 e R$ 100 e a média <br> dos preços dos produtos com preço superior a R$100.
+                    </p>
+                    <p>
+                        <button onclick="exerc16()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p>
+                        <b>20.</b> Faça um programa que leia um vetor com dez posições para números inteiros e mostre somente os<br> números positivos.
+                    </p>
+                    <p> 
+                        <button onclick="exerc20()" class="botaoc"> <b>Iniciar</b> </button> 
+                    </p>
+                    <br>
+                    <br>
+                    <p id="r20" class="r">
+                    </p>
+                    <br>
+                    <p>
+                        <b>25.</b> Faça um programa que leia um vetor com quinze posições para números inteiros. Depois da leitura,<br> divida todos os seus elementos pelo maior valor do vetor. Mostre o vetor após os cálculos.
+                    </p>
+                    <p>
+                        <button onclick="exerc25()" class="botaoc"> <b>Iniciar</b> </button>
+                    </p>
+                    <br>
+                    <br>
+                    <p id="r25" class="r">
+                    </p>
+                    
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
